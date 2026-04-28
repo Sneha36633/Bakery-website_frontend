@@ -1,0 +1,286 @@
+/* --- Main Container --- */
+.category-page {
+  padding: 100px 0 30px 0; 
+  background: linear-gradient(rgba(18, 18, 18, 0.96), rgba(18, 18, 18, 0.96)), 
+              url('/Wallpaper.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Header Section (Title + Cart) --- */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-title span {
+  color: #D97706; /* Classic Bakery Orange Theme */
+}
+
+.cart-count {
+  background: #D97706;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+}
+
+/* --- THE FIX: EK LINE MEIN 2 IMAGES (CAKES GRID) --- */
+.cakes-page-grid {
+  display: grid;
+  /* repeat(2, 1fr) ensures ki desktop par sirf 2 columns hi banein */
+  grid-template-columns: repeat(2, 1fr) !important; 
+  gap: 40px; /* Cards ke beech ka gap */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Individual Cake Card Styling --- */
+.cakes-page-grid .menu-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 20px;
+  border: 1px solid rgba(217, 119, 6, 0.5); /* Light orange border */
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cakes-page-grid .menu-card:hover {
+  transform: translateY(-12px);
+  border-color: #D97706;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Image Wrapper --- */
+.cakes-page-grid .menu-img-wrapper {
+  position: relative;
+  height: 350px; /* Height badi rakhi hai taaki full cake premium dikhe */
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.cakes-page-grid .menu-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image stretch nahi hogi */
+  transition: transform 0.5s ease;
+}
+
+.cakes-page-grid .menu-card:hover .menu-img-wrapper img {
+  transform: scale(1.08);
+}
+
+/* --- Price Tag Styling --- */
+.price-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #D97706;
+  padding: 6px 15px;
+  border-radius: 8px;
+  border: 1px solid #D97706;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* --- Card Footer (Name + Button) --- */
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0 5px;
+}
+
+.menu-footer h3 {
+  color: #D97706;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* --- Add to Cart Button --- */
+.add-to-cart-btn {
+  background: #D97706;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #b45309;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(217, 119, 6, 0.4);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 900px) {
+  .cakes-page-grid {
+    grid-template-columns: 1fr !important; /* Mobile par wapas 1 line mein 1 cake */
+    gap: 25px;
+  }
+
+  .cakes-page-grid .menu-img-wrapper {
+    height: 300px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+}
+
+.cakes-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Isse image stretch nahi hogi */
+  border-radius: 10px;
+}
+
+.profile-page {
+  min-height: calc(100vh - 90px);
+  padding: 140px 20px 80px;
+  background: linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92)),
+              url('/Wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 42px 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.profile-card h2 {
+  margin-bottom: 18px;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+.profile-card p {
+  color: #ddd;
+  margin: 12px 0;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.profile-card p strong {
+  color: #D97706;
+}
+
+.order-history-section {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.order-history-section h3 {
+  margin-bottom: 18px;
+  color: #FDE68A;
+  font-size: 1.45rem;
+}
+
+.order-card {
+  margin-bottom: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.18);
+  border-radius: 20px;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.order-status {
+  padding: 8px 14px;
+  background: rgba(217, 119, 6, 0.14);
+  color: #F59E0B;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.order-item-row,
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.order-total-row {
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 12px;
+  color: #fff;
+}
+
+.order-error {
+  color: #fca5a5;
+}
+
+.profile-logout-btn {
+  margin-top: 28px;
+  background: #D97706;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-logout-btn:hover {
+  background: #b45309;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.28);
+}

@@ -1,0 +1,168 @@
+/* --- Menu Section Main --- */
+.menu-section {
+  padding: 80px 0;
+  background: linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92)),
+    url('/Wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-title span {
+  color: #D97706;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Card Styling --- */
+.menu-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  border-color: #D97706;
+  box-shadow: 0 15px 35px rgba(217, 119, 6, 0.25);
+}
+
+.menu-img-wrapper {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.menu-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.category-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #D97706;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- THE UPDATE: Name & Capsule Button Parallel --- */
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  /* Isse Name Left aur Button Right ho jayega */
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+  width: 100%;
+}
+
+.menu-footer h3 {
+  color: #D97706;
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: left;
+  font-weight: 600;
+  flex: 1;
+  /* Name ko space allocate karne ke liye */
+}
+
+/* Updated Explore Button: Orange Capsule Style */
+.explore-btn {
+  background: transparent;
+  border: 2px solid #D97706;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  /* Text ko line break se rokne ke liye */
+  min-width: fit-content;
+}
+
+.explore-btn:hover {
+  background: #D97706;
+  color: white;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+  transform: scale(1.05);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* --- Responsive Layouts --- */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 2.5rem;
+  }
+
+  /* Mobile par bheed kam karne ke liye stacking */
+  .menu-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .explore-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

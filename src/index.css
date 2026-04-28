@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Isse padding width ke andar hi rehti hai */
+}
+
+body, html {
+  overflow-x: hidden; /* Screen se bahar jaane wale content ko hide karega */
+  width: 100%;
+}
+/* index.css ya App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+#root {
+  min-height: 100%;
+  margin-top: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.app-content {
+  position: relative;
+  min-height: calc(100vh - 220px);
+  padding-top: 0;
+}

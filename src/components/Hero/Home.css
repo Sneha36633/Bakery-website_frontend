@@ -1,0 +1,43 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  /* Jo image maine generate ki thi, uska path yahan daalein */
+  background: linear-gradient(rgba(43, 24, 16, 0.7), rgba(43, 24, 16, 0.7)), 
+              url('../../assets/Hero.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home-delight.span {
+  color: #cf8b0d; 
+  text-shadow: 0 0 10px rgba(219, 130, 13, 0.5);
+}
+.home-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  max-width: 800px;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  max-width: 600px; /* Isse text zyada wide nahi hoga aur 2-3 lines mein settle ho jayega */
+  line-height: 1.6;
+  margin: 20px auto;
+  color: #f1f1f1;
+
+}
+.highlight {
+    color: #D2691E; /* Wahi orange color jo button ka hai */
+    font-weight: 700;
+}
+
+/* Agar aap chahti hain ki button hover par highlight ka color bhi change ho, 
+toh ye use kar sakti hain (optional): */
+.highlight {
+    display: inline-block;
+    transition: 0.3s;
+}

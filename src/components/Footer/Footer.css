@@ -1,0 +1,133 @@
+/* --- Main Footer Section --- */
+.footer {
+  /* Padding badhane se overlap hat jayega aur gap sahi dikhega */
+  padding: 100px 0 30px 0; 
+  background: linear-gradient(rgba(18, 18, 18, 0.96), rgba(18, 18, 18, 0.96)), 
+              url('/Wallpaper.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 2px solid #D97706; 
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Content Container --- */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* --- Logo & Description --- */
+.footer-logo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-logo span {
+  color: #D97706;
+}
+
+.footer-desc {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* --- Headings --- */
+.footer-col h3 {
+  color: #D97706;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Quick Links --- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.footer-links li a:hover {
+  color: #D97706;
+  padding-left: 8px; /* Smooth movement on hover */
+}
+
+/* --- Contact Details Alignment Fix --- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center; /* Icons aur Text ko vertical line mein set karega */
+  gap: 15px;
+  color: #ccc;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.f-icon {
+  color: #D97706;
+  font-size: 1.2rem;
+  width: 25px; /* Fixed width for icon alignment */
+  text-align: center;
+}
+
+/* --- Bottom Copyright Bar --- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+  }
+
+  .footer-links li a:hover {
+    padding-left: 0;
+  }
+}

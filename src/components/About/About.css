@@ -1,0 +1,165 @@
+/* --- About Section Base --- */
+.about-section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92)), 
+              url('/Wallpaper.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Section Header (About Us) --- */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header .about-title {
+  font-size: 3.5rem;
+  color: white;
+  margin: 0;
+}
+
+.section-header .about-title span {
+  color: #D97706;
+}
+
+/* --- Main Container --- */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto 100px auto; /* Har row ke beech gap */
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 20px;
+}
+
+/* Row Reverse Logic */
+.about-container.reverse {
+  flex-direction: row-reverse !important;
+  margin-bottom: 40px; /* Contact section ke pass lane ke liye */
+}
+
+/* --- THE FIX: Image Styling --- */
+.about-image {
+  flex: 1;
+  position: relative;
+  width: 100%; /* Image area fix */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  min-height: 350px; /* Taaki box collapse na ho */
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 20px 20px 0px #D97706;
+}
+
+/* Reverse Shadow (Mirror Effect) */
+.about-container.reverse .about-image img {
+  box-shadow: -20px 20px 0px #D97706;
+}
+
+/* --- Badge Fix --- */
+.experience-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: #D97706;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 5;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.reverse .experience-badge {
+  right: auto !important;
+  left: -15px !important;
+  background: #D97706; /* Darker brown for variation */
+}
+
+/* --- Content Styling --- */
+.about-content {
+  flex: 1;
+  text-align: left;
+}
+
+.about-subtitle {
+  color: #D97706;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-title span { color: #D97706; }
+
+.about-content p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* --- Checkmark List --- */
+.about-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.about-features li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #eee;
+  font-weight: 500;
+}
+
+/* --- Button --- */
+.about-btn {
+  background: transparent;
+  border: 2px solid #D97706;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #D97706;
+  transform: translateY(-3px);
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 992px) {
+  .about-container, 
+  .about-container.reverse {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .about-content { text-align: center; }
+  .about-features li { justify-content: center; }
+
+  .about-image img {
+    box-shadow: 10px 10px 0px #D97706 !important;
+  }
+}
