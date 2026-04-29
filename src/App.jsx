@@ -11,7 +11,7 @@ import Home from './components/Hero/Home';
 import Menu from './components/Menu/Menu';
 import Speciality from './components/Speciality/Speciality';
 import About from './components/About/About';
-import Contact from './components/contact/contact';
+import Contact from './components/Contact/contact';
 import Footer from './components/Footer/Footer';
 
 // Pages
