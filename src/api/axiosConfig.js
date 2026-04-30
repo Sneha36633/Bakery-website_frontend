@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  // '/api' ki jagah apna Render wala URL dalein
-  baseURL: 'https://classic-bakery-backend.onrender.com/api', 
+  baseURL: import.meta.env.VITE_API_URL || 'https://classic-bakery-backend.onrender.com'
 });
 
 API.interceptors.request.use((config) => {
