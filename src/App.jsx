@@ -24,6 +24,16 @@ import Donuts from './Pages/Donuts';
 import Cart from './Pages/Cart'; 
 import Login from './Pages/Login';
 import Profile from './Pages/Profile';
+import { signupUser, loginUser, sendContact } from "./api";
+
+// signup
+signupUser({ name, email, password });
+
+// login
+loginUser({ email, password });
+
+// contact
+sendContact({ name, email, message });
 
 
 const App = () => {
