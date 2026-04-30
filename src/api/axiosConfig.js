@@ -1,11 +1,14 @@
-import axios from 'axios';
+// api.js
+import axios from "axios";
 
 const API = axios.create({
-  baseURL: 'https://your-backend-name.onrender.com'
+  baseURL: "https://your-backend-name.onrender.com/api", // ✅ /api add kiya
+  withCredentials: true
 });
 
+// 🔐 Token auto attach
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
