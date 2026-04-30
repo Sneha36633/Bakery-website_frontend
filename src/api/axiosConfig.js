@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://your-backend-name.onrender.com/api", // ✅ /api add kiya
+  baseURL: " https://classic-bakery-backend.onrender.com/api", // ✅ /api add kiya
   withCredentials: true
 });
 
