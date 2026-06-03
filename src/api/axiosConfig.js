@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://classic-bakery-backend-3.onrender.com/api'  // ✅ ye change karo
+  baseURL: 'http://localhost:5000/api',  // ✅ Local backend
+  timeout: 10000  // 10 second timeout
 });
 
 API.interceptors.request.use((config) => {
